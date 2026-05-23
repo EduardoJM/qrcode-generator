@@ -12,7 +12,7 @@ export const ColorPicker = () => {
   const { background, foreground, setBackground, setForeground } = useQRCode();
 
   return (
-    <div className="grid grid-cols-2">
+    <div className="flex flex-col items-stretch gap-8">
       <div className="flex flex-col items-stretch">
         <Label className="flex flex-col items-stretch">Cor de Fundo</Label>
         <Popover>

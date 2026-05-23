@@ -1,3 +1,4 @@
+import { Download } from "lucide-react";
 import { Button } from "../ui/button";
 import { toPng } from "html-to-image";
 
@@ -12,7 +13,8 @@ export const DownloadButton = () => {
   };
 
   return (
-    <Button type="button" onClick={handleDownload}>
+    <Button type="button" size="lg" onClick={handleDownload}>
+      <Download />
       Baixar
     </Button>
   );

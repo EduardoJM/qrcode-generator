@@ -11,7 +11,7 @@ export const ValueInput = () => {
   const { value, setValue } = useQRCode();
 
   return (
-    <div className="my-10">
+    <div>
       <Label htmlFor="value-input">Link do Site / Texto do QRCode</Label>
       <InputGroup>
         <InputGroupAddon>
