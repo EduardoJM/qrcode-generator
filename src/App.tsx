@@ -6,15 +6,18 @@ import { ColorPicker } from "./components/color-picker";
 import { DownloadButton } from "./components/download-button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Frame, Palette, QrCode } from "lucide-react";
+import { CopyButton } from "./components/copy-button";
 
 function App() {
   return (
     <main className="bg-primary flex flex-col items-stretch">
       <header className="py-10">
-        <h1 className="text-center text-3xl font-bold text-white">
-          Crie e personalize um QR Code em segundos!
+        <h1 className="text-center text-5xl font-bold text-white mb-4">
+          Crie e Personalize QR Codes
+          <br />
+          em segundos
         </h1>
-        <h2 className="text-center text-white">
+        <h2 className="text-center text-white text-2xl">
           Gratuíto, sem limite de duração, sem pegadinhas!
         </h2>
       </header>
@@ -54,7 +57,8 @@ function App() {
               <div className="flex flex-col items-stretch">
                 <QRCode />
 
-                <div className="flex flex-col items-center mt-10">
+                <div className="flex flex-row items-center justify-center gap-2 mt-10">
+                  <CopyButton />
                   <DownloadButton />
                 </div>
               </div>
