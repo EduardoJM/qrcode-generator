@@ -5,7 +5,10 @@ export const ScanMeBottom: QRCodeFrame = ({ children }) => {
     <div className="flex flex-col items-stretch">
       <div
         className="border-8 rounded-t-lg p-1"
-        style={{ borderColor: "var(--qrcode-foreground)" }}
+        style={{
+          background: "var(--qrcode-background)",
+          borderColor: "var(--qrcode-foreground)",
+        }}
       >
         {children}
       </div>

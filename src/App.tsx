@@ -3,6 +3,7 @@ import { FramesPicker } from "./components/frames-picker";
 import { QRCodeProvider } from "./context/qrcode-context";
 import { ValueInput } from "./components/value-input";
 import { ColorPicker } from "./components/color-picker";
+import { DownloadButton } from "./components/download-button";
 
 function App() {
   return (
@@ -17,7 +18,13 @@ function App() {
             <FramesPicker />
           </div>
 
-          <QRCode />
+          <div className="flex flex-col items-stretch">
+            <QRCode />
+
+            <div className="flex items-center justify-center">
+              <DownloadButton />
+            </div>
+          </div>
         </div>
       </QRCodeProvider>
     </>

@@ -15,9 +15,11 @@ export const QRCode = () => {
       }
       className="flex flex-col items-center"
     >
-      <Frame>
-        <QRCodeSVG value={value} bgColor={background} fgColor={foreground} />
-      </Frame>
+      <div id="qrcode">
+        <Frame>
+          <QRCodeSVG value={value} bgColor={background} fgColor={foreground} />
+        </Frame>
+      </div>
     </div>
   );
 };

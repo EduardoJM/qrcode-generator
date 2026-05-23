@@ -14,7 +14,10 @@ export const ScanMeTop: QRCodeFrame = ({ children }) => {
       </div>
       <div
         className="border-8 rounded-b-lg p-1"
-        style={{ borderColor: "var(--qrcode-foreground)" }}
+        style={{
+          background: "var(--qrcode-background)",
+          borderColor: "var(--qrcode-foreground)",
+        }}
       >
         {children}
       </div>
