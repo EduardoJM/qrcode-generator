@@ -2,7 +2,7 @@ import { Copy } from "lucide-react";
 import { Button } from "../ui/button";
 import { toPng } from "html-to-image";
 
-function dataURLtoBlob(dataURL) {
+function dataURLtoBlob(dataURL: string) {
   const byteString = atob(dataURL.split(",")[1]);
   const arrayBuffer = new ArrayBuffer(byteString.length);
   const intArray = new Uint8Array(arrayBuffer);
