@@ -4,7 +4,12 @@ import { toPng } from "html-to-image";
 
 export const DownloadButton = () => {
   const handleDownload = async () => {
-    const dataUrl = await toPng(document.getElementById("qrcode"), {});
+    const el = document.getElementById("qrcode");
+    if (!el) {
+      return;
+    }
+
+    const dataUrl = await toPng(el, {});
 
     const link = document.createElement("a");
     link.download = "qrcode.png";

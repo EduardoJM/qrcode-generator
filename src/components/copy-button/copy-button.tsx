@@ -16,7 +16,11 @@ function dataURLtoBlob(dataURL: string) {
 
 export const CopyButton = () => {
   const handleCopy = async () => {
-    const dataUrl = await toPng(document.getElementById("qrcode"), {});
+    const el = document.getElementById("qrcode");
+    if (!el) {
+      return;
+    }
+    const dataUrl = await toPng(el, {});
 
     navigator.clipboard.write([
       new ClipboardItem({
