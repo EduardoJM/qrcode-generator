@@ -28,7 +28,7 @@ export type QRCodeContextValue = Pick<
 const QRCodeContext = createContext({} as QRCodeContextValue);
 
 export const QRCodeProvider = ({ children }: PropsWithChildren) => {
-  const [value, setValue] = useState("OIE");
+  const [value, setValue] = useState("");
   const [background, setBackground] = useState("#ffffff");
   const [foreground, setForeground] = useState("#000000");
   const [frame, setFrame] = useState<QRCodeFrame>(() => frames[0]);
