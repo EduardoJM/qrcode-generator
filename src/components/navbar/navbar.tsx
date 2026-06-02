@@ -3,7 +3,7 @@ import { QrCode } from "lucide-react";
 export const NavBar = () => {
   return (
     <nav className="bg-primary text-primary-foreground">
-      <div className="px-80 py-5 flex flex-row items-center gap-5">
+      <div className="px-2 md:px-8 xl:px-40 2xl:px-80 py-5 flex flex-row items-center gap-5">
         <div>
           <QrCode className="size-8" />
         </div>
