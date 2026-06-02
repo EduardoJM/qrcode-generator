@@ -8,12 +8,12 @@ import {
 export const Faq = () => {
   return (
     <div className="py-20">
-      <div className="px-80">
+      <div className="px-2 md:px-8 xl:px-80">
         <h2 className="text-3xl text-center font-bold mb-8" id="faq">
           Perguntas Frequentes
         </h2>
 
-        <div className="px-80">
+        <div className="2xl:px-80">
           <Accordion type="single" collapsible>
             <AccordionItem value="faq-1">
               <AccordionTrigger className="text-2xl font-medium">
