@@ -47,10 +47,13 @@ function App() {
               <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div className="flex flex-col items-stretch border-b lg:border-b-0 lg:border-r pr-5">
                   <Tabs defaultValue="url">
-                    <TabsList variant="line" className="w-full">
+                    <TabsList
+                      variant="line"
+                      className="w-full flex flex-col items-stretch sm:flex-row sm:items-center group-data-horizontal/tabs:h-26 sm:group-data-horizontal/tabs:h-8"
+                    >
                       <TabsTrigger value="url" className="text-xl">
                         <QrCode className="size-5" />
-                        Dados do QRCode
+                        Dados
                       </TabsTrigger>
                       <TabsTrigger value="color" className="text-xl">
                         <Palette className="size-5" />
