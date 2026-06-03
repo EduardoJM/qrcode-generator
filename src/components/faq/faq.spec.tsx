@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { Faq } from "./faq";
 
 describe("Faq", () => {
@@ -11,31 +10,26 @@ describe("Faq", () => {
     ).toBeInTheDocument();
   });
 
-  test("should render titles", () => {
+  test("should render titles and contents", () => {
     render(<Faq />);
 
-    expect(screen.queryByText("É gratuíto?")).toBeInTheDocument();
+    expect(screen.queryByText(/^Gratuíto$/i)).toBeInTheDocument();
     expect(
-      screen.queryByText("Os QRCode's expiram depois de algum tempo?"),
+      screen.queryByText("Todo o serviço nesse site é gratuíto e sempre será."),
     ).toBeInTheDocument();
-  });
 
-  test("should not render contents by default", () => {
-    render(<Faq />);
+    expect(screen.queryByText(/^Tempo de duração$/i)).toBeInTheDocument();
+    expect(
+      screen.queryByText(
+        "Os QR Codes gerados não expiram. Você gera uma vez e pode utilizar a imagem para sempre.",
+      ),
+    ).toBeInTheDocument();
 
-    const content = screen.getByLabelText("É gratuíto?");
-    expect(content).toBeInTheDocument();
-    expect(content).not.toBeVisible();
-  });
-
-  test("should show contents when click on label", async () => {
-    render(<Faq />);
-
-    const heading = screen.getByText("É gratuíto?");
-    const content = screen.getByLabelText("É gratuíto?");
-
-    await userEvent.click(heading);
-
-    expect(content).toBeVisible();
+    expect(screen.queryByText(/^Código aberto$/i)).toBeInTheDocument();
+    expect(
+      screen.queryByText(
+        "O código-fonte desse site é aberto e disponível no GitHub.",
+      ),
+    ).toBeInTheDocument();
   });
 });
