@@ -3,6 +3,8 @@ name: Check if tests is passing and send to coveralls
 on:
   pull_request:
     branches: ["main"]
+  push:
+    branches: [main]
 
 jobs:
   tests:
