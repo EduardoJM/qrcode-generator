@@ -64,7 +64,7 @@ describe("ColorPicker", () => {
     const button = screen.getByTestId("bg-color");
     await userEvent.click(button);
 
-    const hexInput = screen.queryByLabelText("hex");
+    const hexInput = screen.getByLabelText("hex");
     await userEvent.clear(hexInput);
     await userEvent.type(hexInput, "2200FF");
 
@@ -84,7 +84,7 @@ describe("ColorPicker", () => {
     const button = screen.getByTestId("fg-color");
     await userEvent.click(button);
 
-    const hexInput = screen.queryByLabelText("hex");
+    const hexInput = screen.getByLabelText("hex");
     await userEvent.clear(hexInput);
     await userEvent.type(hexInput, "2200FF");
 
