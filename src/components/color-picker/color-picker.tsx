@@ -21,15 +21,17 @@ export const ColorPicker = () => {
               type="button"
               variant="outline"
               className="justify-start cursor-pointer"
+              data-testid="bg-color"
             >
               <div
                 className="size-4 border"
+                data-testid="bg-preview"
                 style={{ backgroundColor: background }}
               ></div>
               {background}
             </Button>
           </PopoverTrigger>
-          <PopoverContent>
+          <PopoverContent className="bg-[transparent] shadow-none border-0 ring-0 w-auto">
             <SketchPicker
               color={background}
               onChange={(color) => setBackground(color.hex)}
@@ -45,10 +47,12 @@ export const ColorPicker = () => {
               type="button"
               variant="outline"
               className="justify-start cursor-pointer"
+              data-testid="fg-color"
             >
               <div
                 className="size-4 border"
                 style={{ backgroundColor: foreground }}
+                data-testid="fg-preview"
               ></div>
               {foreground}
             </Button>
