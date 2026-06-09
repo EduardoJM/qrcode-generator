@@ -45,7 +45,7 @@ function HomePage() {
           >
             <QRCodeProvider>
               <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <div className="flex flex-col items-stretch border-b lg:border-b-0 lg:border-r pr-5">
+                <div className="flex flex-col items-stretch border-b lg:border-b-0 lg:border-r lg:pr-5">
                   <Tabs defaultValue="url">
                     <TabsList
                       variant="line"
