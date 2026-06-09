@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { QRCodeProvider, useQRCode } from "@/context/qrcode-context";
 import { FramesPicker } from "./frames-picker";
-import { frames } from "../qrcode";
+import { frames } from "@/components/qrcode-generator/qrcode";
 
 const ValueCheck = () => {
   const { frame } = useQRCode();

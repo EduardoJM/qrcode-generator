@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
-import { frames } from "../qrcode";
-import { Button } from "../ui/button";
+import { frames } from "@/components/qrcode-generator/qrcode";
+import { Button } from "@/components/ui/button";
 import { useQRCode } from "@/context/qrcode-context";
 
 export const FramesPicker = () => {
