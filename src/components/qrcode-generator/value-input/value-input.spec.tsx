@@ -12,17 +12,33 @@ const ValueCheck = () => {
 describe("ValueInput", () => {
   test("should render a input labeled", () => {
     render(<ValueInput />, {
-      wrapper: ({ children }) => (
-        <QRCodeProvider>
-          {children}
-          <ValueCheck />
-        </QRCodeProvider>
-      ),
+      wrapper: ({ children }) => <QRCodeProvider>{children}</QRCodeProvider>,
     });
 
     expect(
       screen.queryByLabelText("Link do Site / Texto do QRCode"),
     ).toBeInTheDocument();
+  });
+
+  test("should render a icon", () => {
+    render(<ValueInput />, {
+      wrapper: ({ children }) => <QRCodeProvider>{children}</QRCodeProvider>,
+    });
+
+    expect(screen.queryByTestId("qrcode-icon")).toBeInTheDocument();
+  });
+
+  test("should focus the input when click on the icon", async () => {
+    render(<ValueInput />, {
+      wrapper: ({ children }) => <QRCodeProvider>{children}</QRCodeProvider>,
+    });
+
+    const icon = screen.getByTestId("qrcode-icon");
+    await userEvent.click(icon);
+
+    expect(
+      screen.queryByLabelText("Link do Site / Texto do QRCode"),
+    ).toHaveFocus();
   });
 
   test("should change value on context", async () => {

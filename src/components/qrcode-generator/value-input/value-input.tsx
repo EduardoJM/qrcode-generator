@@ -15,7 +15,7 @@ export const ValueInput = () => {
       <Label htmlFor="value-input">Link do Site / Texto do QRCode</Label>
       <InputGroup>
         <InputGroupAddon>
-          <QrCode />
+          <QrCode data-testid="qrcode-icon" />
         </InputGroupAddon>
         <InputGroupInput
           value={value}

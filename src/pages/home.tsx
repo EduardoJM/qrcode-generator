@@ -1,12 +1,12 @@
 import { Frame, Palette, QrCode } from "lucide-react";
-import { QRCode } from "@/components/qrcode";
-import { FramesPicker } from "@/components/frames-picker";
+import { QRCode } from "@/components/qrcode-generator/qrcode";
+import { FramesPicker } from "@/components/qrcode-generator/frames-picker";
 import { QRCodeProvider } from "@/context/qrcode-context";
-import { ValueInput } from "@/components/value-input";
-import { ColorPicker } from "@/components/color-picker";
-import { DownloadButton } from "@/components/download-button";
+import { ValueInput } from "@/components/qrcode-generator/value-input";
+import { QRCodeColorsPicker } from "@/components/qrcode-generator/qrcode-colors-picker";
+import { DownloadButton } from "@/components/qrcode-generator/download-button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CopyButton } from "@/components/copy-button";
+import { CopyButton } from "@/components/qrcode-generator/copy-button";
 import { NavBar } from "@/components/navbar";
 import { Faq } from "@/components/faq";
 
@@ -68,7 +68,7 @@ function HomePage() {
                       <ValueInput />
                     </TabsContent>
                     <TabsContent value="color" className="py-5">
-                      <ColorPicker />
+                      <QRCodeColorsPicker />
                     </TabsContent>
                     <TabsContent value="frame" className="py-5">
                       <FramesPicker />

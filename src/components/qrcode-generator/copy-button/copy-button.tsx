@@ -1,5 +1,5 @@
 import { Copy } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { toPng } from "html-to-image";
 
 function dataURLtoBlob(dataURL: string) {

@@ -1,4 +1,4 @@
-import { frames, type QRCodeFrame } from "@/components/qrcode";
+import { frames, type QRCodeFrame } from "@/components/qrcode-generator/qrcode";
 import {
   createContext,
   useContext,
